@@ -19,18 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoSolido" translatesAutoresizingMaskIntoConstraints="NO" id="cnm-eS-mYm">
-                                <rect key="frame" x="272.5" y="134" width="55" height="55"/>
+                                <rect key="frame" x="272.5" y="128.5" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="0Aw-43-uW8"/>
                                     <constraint firstAttribute="width" constant="55" id="JgI-0i-U2z"/>
                                 </constraints>
                             </imageView>
                             <searchBar contentMode="redraw" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJ1-lG-Qdx">
-                                <rect key="frame" x="20" y="278" width="560" height="44"/>
+                                <rect key="frame" x="20" y="272.5" width="560" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="61f-D3-8ZW"/>
+                                    <constraint firstAttribute="height" constant="55" id="61f-D3-8ZW"/>
                                 </constraints>
-                                <edgeInsets key="layoutMargins" top="9" left="9" bottom="9" right="9"/>
                                 <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.1529411765" green="0.59999999999999998" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -243,20 +242,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCl-KD-r5n">
-                                <rect key="frame" x="20" y="537" width="560" height="55"/>
-                                <color key="backgroundColor" red="0.1529411765" green="0.59999999999999998" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="tCk-gL-7TL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Cerrar:" destination="VNi-Yg-yWd" eventType="touchUpInside" id="HLo-BC-LzZ"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Vz-XA-ACr">
                                 <rect key="frame" x="20" y="33" width="560" height="496"/>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.81176470590000005" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -274,6 +259,20 @@
                                 </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCl-KD-r5n">
+                                <rect key="frame" x="20" y="537" width="560" height="55"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.59999999999999998" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="tCk-gL-7TL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Cerrar:" destination="VNi-Yg-yWd" eventType="touchUpInside" id="HLo-BC-LzZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, pickReturnTextSearchBarProtocol {
+class ViewController: UIViewController, pickReturnTextSearchBarProtocol, UISearchBarDelegate {
 
 //MARK: - Outlets
     @IBOutlet weak var solidImage: UIImageView!
@@ -18,6 +18,9 @@ class ViewController: UIViewController, pickReturnTextSearchBarProtocol {
 //MARK: - Constructor
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+        
         
         rotateSolidImage()
     }
@@ -91,6 +94,19 @@ class ViewController: UIViewController, pickReturnTextSearchBarProtocol {
                 alert.showError("Error Conexión", subTitle: "Esta aplicación hace uso de internet.\nPor favor activa tus datos o verifica tu conexión Wi-Fi.\nGracias.")
             }
             
+        }
+    }
+    //MARK: - Keyboard Search Bar
+    internal func searchBarSearchButtonClicked(searchBar: UISearchBar){
+        let internet = Internet()
+        let alert = SCLAlertView()
+        
+        searchBar.resignFirstResponder()
+        
+        if internet.InternetHere(){
+            performSegueWithIdentifier("MainResultadosIdentifier", sender: self)
+        } else {
+            alert.showError("Error Conexión", subTitle: "Esta aplicación hace uso de internet.\nPor favor activa tus datos o verifica tu conexión Wi-Fi.\nGracias.")
         }
     }
 
